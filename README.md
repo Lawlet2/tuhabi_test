@@ -48,11 +48,12 @@ Para implementar el servicio de consulta emplearé
 el framework FastAPI que me permitirá exponer el endpoint para que 
 los usuarios consulten los inmuebles de acuerdo a los filtros aplicados.
 
-La base de datos de pruebas proporcionada para la prueba es MySQL y 
-por ello emplearé el conector MySQL Connector/Python (el cual cumple 
-con la especificación [Python Database API Specification v2.0 PEP 249](
+La base de datos proporcionada para la prueba es MySQL y por ello 
+emplearé el conector MySQL Connector/Python (el cual cumple con la 
+especificación [Python Database API Specification v2.0 PEP 249](
 https://peps.python.org/pep-0249/))
-y que permite los programas en Python accedan a bases de datos MySQL.
+y que permite que los programas en Python accedan a bases de datos 
+MySQL.
 
 La metodología de diseño propuesta es TDD (Test Driven Development) que 
 consiste en el siguiente flujo:
@@ -72,12 +73,13 @@ entidad - relación empleando la herramienta de Google
 Drawings y el código SQL para extender el modelo se codificará en archivos
 .sql relacionados a este servicio.
 
-## Stack tecnológico
+## Stack tecnológico y herramientas
 
 - Python 3.8.9
 - FastAPI 0.75.0
 - MySQL 5.7.12 (MySQL Community Server (GPL))
 - MySQL Connector/Python  8.0.28
+- Google Drawings
 
 ## Configuración del proyecto
 
