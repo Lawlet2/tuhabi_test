@@ -46,8 +46,7 @@ def get_properties(
             password=settings.db_password,
             host=settings.db_host,
             port=settings.db_port,
-            database=settings.db_name,
-            use_pure=True
+            database=settings.db_name
     ) as Connection:
 
         query = property_filter(
