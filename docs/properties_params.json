@@ -1,0 +1,8 @@
+{
+  "url": "/properties",
+  "params": {
+    "city": "bogota",
+    "year": 2000
+  },
+  "url_with_params": "/properties?year=2000&city=bogota"
+}
