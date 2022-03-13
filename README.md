@@ -80,7 +80,7 @@ Drawings y SQL para extender el modelo.
 - MySQL Connector/Python  8.0.28
 - Google Drawings
 
-## Configuración del proyecto
+## Configuración del proyecto (servicio consulta)
 
 ### Instalación
 Sugerencia: Utilizar ``` Virtualenv ```
@@ -189,6 +189,29 @@ https://github.com/Lawlet2/tuhabi_test/blob/development/docs/properties_params.j
 }
 ```
 
+## Propuesta (servicio "Me gusta")
+Analizando las tablas auth_user y property podemos concluir
+que una forma de crear la tabla de "Me gusta" es registrando
+el id de propiedad y el id de usuario para tener una relación
+de muchos usuarios a muchas propiedades.
+
+A continuación se muestra la tabla propuesta:
+
+![Like_table](docs/images/like_table.jpg)
+
+y el código SQL para generarla:
+
+```
+CREATE TABLE [habi_db].[likes] (
+    [Id]      INT IDENTITY(1,1) NOT NULL,
+    property_id INT(11) NOT NULL,
+    auth_user_id INT(11) NOT NULL,
+
+    FOREIGN KEY(property_id) REFERENCES property(id),
+    FOREIGN KEY(auth_user_id) REFERENCES auth_user(id),
+    UNIQUE (property_id, auth_user_id)
+);
+```
 
 
 
