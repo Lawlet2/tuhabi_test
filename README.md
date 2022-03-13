@@ -208,7 +208,7 @@ A continuación se muestra la tabla propuesta:
 y el código SQL para generarla:
 
 ```
-CREATE TABLE [habi_db].[likes] (
+CREATE TABLE [habi_db].[like] (
     [Id]      INT IDENTITY(1,1) NOT NULL,
     property_id INT(11) NOT NULL,
     auth_user_id INT(11) NOT NULL,
