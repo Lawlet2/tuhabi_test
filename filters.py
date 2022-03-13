@@ -3,6 +3,8 @@ from queries import select_properties_query
 
 def property_filter(allowed_statuses, year, city):
     """basic function to filter properties"""
+    if city:
+        city = city.strip("'")
     year_value = f" and p.year={year} "
     city_value = f" and p.city='{city}' "
 

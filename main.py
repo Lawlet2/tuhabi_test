@@ -52,7 +52,7 @@ def get_properties(
         query = property_filter(
             allowed_statuses=settings.allowed_statuses,
             year=year,
-            city=city.strip("'")
+            city=city
         )
 
         executed_query = Connection.execute_query(query)
