@@ -58,7 +58,7 @@ MySQL.
 La metodología de diseño propuesta es TDD (Test Driven Development) que 
 consiste en el siguiente flujo:
   
-* Escribir la prueba, se ejecuta y falla.
+* S escribe la prueba, se ejecuta y falla.
 * Se escribe el código suficiente para que la 
     prueba pase el test.
 * Se refactoriza el código para mejorarlo.
@@ -70,8 +70,7 @@ consiste en el siguiente flujo:
 Este requerimiento es conceptual debido a que no existe el modelo en la 
 base de datos para implementarlo. La propuesta es crear un diagrama 
 entidad - relación empleando la herramienta de Google 
-Drawings y el código SQL para extender el modelo se codificará en archivos
-.sql relacionados a este servicio.
+Drawings y SQL para extender el modelo.
 
 ## Stack tecnológico y herramientas
 
@@ -165,7 +164,30 @@ tests/test_properties.py .......                                         [100%]
 ============================== 7 passed in 4.79s ===============================
 ```
 ## Documentación
+FastAPI nos brinda dos enpoints de documentación de bastante
+utilidad y son los siguientes:
+```
+ - ReDoc:  [http://localhost:8000/redoc](http://localhost:8000/redoc)
+ - Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+```
 
+A continuación se muestra el archivo ```properties_params.json```
+el cual específica que datos se espera que lleguen de front con los
+filtros solicitados por los usuarios.
+
+Link al archivo: [docs/properties_params](
+https://github.com/Lawlet2/tuhabi_test/blob/development/docs/properties_params.json
+)
+```
+{
+  "url": "/properties",
+  "params": {
+    "city": "bogota",
+    "year": 2000
+  },
+  "url_with_params": "/properties?year=2000&city=bogota"
+}
+```
 
 
 
