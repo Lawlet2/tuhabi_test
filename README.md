@@ -3,6 +3,12 @@
 
 Prueba técnica tuhabi.mx
 
+Demo: [API](http://ec2-52-90-21-171.compute-1.amazonaws.com:8000/)
+
+Docs: [API](http://ec2-52-90-21-171.compute-1.amazonaws.com:8000/docs) 
+
+Redoc: [API](http://ec2-52-90-21-171.compute-1.amazonaws.com:8000/redoc)
+
 ## Introducción
 
 Habi desea tener una herramienta en la que sus usuarios puedan consultar los 
