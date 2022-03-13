@@ -83,6 +83,87 @@ Drawings y el código SQL para extender el modelo se codificará en archivos
 
 ## Configuración del proyecto
 
+### Instalación
+Sugerencia: Utilizar ``` Virtualenv ```
+
+Virtualenv es una herramienta para crear ambientes aislados de python
+y tiene una gran utilidad para manejar diferentes proyectos
+y sus dependencias de forma organizada.
+
+[Guía de instalación de virtualenv](https://virtualenv.pypa.io/)
+
+Instalar dependencias de requirements.txt usando pip
+```
+pip install -r requirements.txt
+```
+
+Configurar variables de entorno 
+creando un archivo llamado .env 
+en la raíz del proyecto y una vez guardado 
+tus archivos deben verse así:
+```
+|database/
+|docs/
+|tests/
+|.gitignore
+|README.md
+|config.py
+|filters.py
+|main.py
+|queries.py
+|requirements.txt
+|serializers.py
+|.env    <================
+```
+
+En este archivo ingresaremos las siguientes variables:
+```
+## DB CONFIGURATION ##
+DB_HOST=host_de_la_base
+DB_PORT=puerto_de_la_base
+DB_NAME=nombre_de_la_base
+DB_USER=nombre_de_usuario
+DB_PASSWORD=contraseña
+
+## GENERAL ###
+## Estados de propiedades permitidos ##
+ALLOWED_STATUSES="'pre_venta', 'en_venta', 'vendido'"
+```
+
+Ahora podemos correr el servidor de desarrollo uvicorn
+con el siguiente comando:
+```
+uvicorn main:app --reload
+```
+
+La consola mostrará los siguientes mensajes y podemos
+entrar consumir el servicio en http://127.0.0.1:8000:
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [17619] using statreload
+INFO:     Started server process [17621]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
+
+### Tests
+Para generar los tests es necesario ingresar el siguiente
+comando en la terminal:
+
+```
+pytest
+```
+
+El resultado será el siguiente:
+
+```
+plugins: anyio-3.5.0
+collected 7 items                                                              
+
+tests/test_properties.py .......                                         [100%]
+
+============================== 7 passed in 4.79s ===============================
+```
 ## Documentación
 
 
