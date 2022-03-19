@@ -170,7 +170,7 @@ tests/test_properties.py .......                                         [100%]
 ============================== 7 passed in 4.79s ===============================
 ```
 ## Documentación
-FastAPI nos brinda dos enpoints de documentación de bastante
+FastAPI nos brinda dos endpoints de documentación de bastante
 utilidad y son los siguientes:
 ```
  - ReDoc:  [http://localhost:8000/redoc](http://localhost:8000/redoc)
